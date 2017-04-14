@@ -1,0 +1,165 @@
+body{
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  background-color: #6b0808;
+  cursor: default;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+td{
+  border: solid 3px;
+  width: 12vh;
+  height: 12vh;
+  text-align: center;
+  font-size: 10vh;
+}
+td:hover{
+  background-color: #1d1147;
+}
+#board td{
+  border: solid 3px;
+  width: 25vh;
+  height: 25vh;
+}
+table{
+  border-collapse: collapse;
+  transform: rotateX(50deg);
+  margin: auto;
+  margin-bottom: -50px;
+  background-color: #0E062D;
+  box-shadow: 0px 5px 0px white;
+  color: white;
+}
+#turn{
+  display: none;
+  color: white;
+  font-size: 5vh;
+  text-align: center;
+  margin: 20px;
+}
+ #board{
+   perspective: 1000px;
+   perspective-origin: 50% 50%;
+   display: none;
+   position: relative;
+   top: 50%;
+   transform: translate(0, -50%);
+ }
+ #board3D{
+   perspective: 1000px;
+   perspective-origin: 50% 50%;
+    display: none;
+    position: relative;
+    top:-11vh;
+ }
+ #leftPlane{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  z-index: -1000;
+ }
+ #leftPlane2{
+   width: 36vh;
+    height: 72vh;
+    border: solid 1px white;
+    background-color: #382842;
+    transform: rotateX( -180deg ) translateZ( 8vh );
+ }
+ #menu{
+   position: absolute;
+   top: 0px;
+   height: 100%;
+   width: 100%;
+   color: white;
+   z-index: 10000;
+   font-size: 4vh;
+ }
+#menuWrap{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+#menuTitle{
+  text-align: center;
+  font-size: 8vh;
+  margin-bottom: 10vh;
+}
+#numberPlayer{
+  display: flex;
+}
+#numberPlayer div{
+  flex-grow: 1;
+  text-align: center;
+  cursor: pointer;
+}
+#versionOne, #versionTwo{
+  height: 0px;
+  overflow: hidden;
+  transition: height .5s;
+  font-size: 2vh;
+}
+#choose{
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  color: white;
+  z-index: 10000;
+  font-size: 4vh;
+  background-color: rgba(28, 3, 43, .9);
+  display: none;
+}
+#chooseWrap{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+#chooseTitle{
+  text-align: center;
+  font-size: 8vh;
+  margin-bottom: 10vh;
+}
+#endGame{
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top:0px;
+  color: white;
+  z-index: 10000;
+  font-size: 4vh;
+  background-color: rgba(28, 3, 43, .9);
+}
+#endGameWrap{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+#winner{
+  text-align: center;
+  font-size: 8vh;
+  margin-bottom: 10vh;
+}
+.options{
+  display: flex;
+  cursor: pointer;
+}
+.options div{
+  flex-grow: 1;
+  text-align: center;
+}
