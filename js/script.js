@@ -225,7 +225,7 @@ function minimax(board, virtualPlayer, depth, is3d){
   let moves = []
 
   if(is3d){
-    for(let i = 1; i < board.length; i++){
+    for(let i = 0; i < board.length; i++){
       for(let j = 0; j < board[i].length; j++){
         for(let k = 0; k < board[i][j].length; k++){
           if(board[i][j][k] === 0){
@@ -248,12 +248,6 @@ function minimax(board, virtualPlayer, depth, is3d){
             }
           }
         }
-      }
-      if(i === 2){
-        i = 0
-      }
-      if(i === 0){
-        i = 3
       }
     }
   }
