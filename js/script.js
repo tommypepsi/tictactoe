@@ -1,3 +1,5 @@
+var isFirefox = typeof InstallTrigger !== 'undefined';
+
 const board = [
   [0, 0, 0],
   [0, 0, 0],
@@ -518,6 +520,9 @@ function basicInteraction(isOnePlayer, is3d, board){
 }
 
 window.onload = function(){
+  if(isFirefox){
+    document.getElementById("leftPlane").style.display = "none"
+  }
   document.getElementById("twoPlayer").onclick = function(){
     if(document.getElementById("versionTwo").style.height == "100px"){
       document.getElementById("versionTwo").style.height = "0px"
